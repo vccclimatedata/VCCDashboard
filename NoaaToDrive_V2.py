@@ -275,7 +275,7 @@ def process_batches(service, sheet_service, folder_id, csv_list, headers, state,
 
 try:
      #Get the directory of the current script
-     script_dir = os.path.dirname(os.path.abspath("daen690-vcc-fbb986abb488-service-key.json"))
+     script_dir = os.path.dirname(os.path.abspath("vcc-power-bi-service-key.json"))
 
 except NameError:
     # __file__ is not defined, assume current working directory is the script directory
@@ -283,7 +283,7 @@ except NameError:
 
 
 # Use the service account JSON key file for authentication
-SERVICE_ACCOUNT_FILE = os.path.join(script_dir, "daen690-vcc-fbb986abb488-service-key.json")
+SERVICE_ACCOUNT_FILE = os.path.join(script_dir, "vcc-power-bi-service-key.json")
 SCOPES = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']
 
 credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
@@ -325,10 +325,10 @@ for year in years:
 
 
 # Define the Google Drive parent folder ID where the files will be uploaded
-folder_id = '1BtzVsVUoc40eVh9fTd91FB5SDoP2qWui'  # Replace with your folder ID
+folder_id = '1T10vDl4Mp3OOu09EAjXYOsmmbUutMGAE'  # Replace with your folder ID
 
 #Check for Master Sheet.
-Master_Sheet_Name = "TEST_VCC Climate Master Sheet"
+Master_Sheet_Name = "VCC Climate Master Sheet"
 Master_Sheet_Id = get_sheet_id(service, folder_id, Master_Sheet_Name)
 
 #Create a master spreadsheet if there is none yet.
