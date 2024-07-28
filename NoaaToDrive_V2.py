@@ -308,7 +308,7 @@ state = ['VA']
 current_year = int(datetime.now().year)
 
 # Setting the range back 30 years until the current year 
-years = [*range(1951, current_year + 1, 1)] 
+years = [*range(1994, current_year + 1, 1)] 
 
 # Defining the 4 measurement types and the months
 types = ['prcp','tavg','tmax','tmin']
